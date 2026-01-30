@@ -1,6 +1,6 @@
 #!/bin/bash
-PERSON1 =$1
-PERSON2 =$2
+PERSON1=$1
+PERSON2=$2
 
 echo "This is testing"
 echo "passed the test"
