@@ -4,7 +4,7 @@ USERID=$(id -u)
 
 echo "what is userid :$USERID"
 
-if ($USERID -ne 0); then
+if [ $USERID -ne 0 ]; then
 echo "please run script with root user"
 fi
 
