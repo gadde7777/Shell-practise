@@ -9,6 +9,6 @@ NUMBER=$1
 #-eq  -> equal to
 #-ne -> not equal
 
-if [$NUMBER -gt 20]; then
+if [ $NUMBER -gt 20]; then
 echo "Givem number : $NUMBER is greater than 25"
 fi
