@@ -9,30 +9,22 @@ echo "please run script with root user"
 exit 1
 fi
 
-echo "Instaling nginx"
-dnf install nginx -y
-
-if [ $? -ne 0 ]; then
-echo "Installing Nginx ...Failure"
-exit 1
+#BY Default shell will not execute
+VALIDATE(){
+if [ $1 -ne 0 ]; then
+      echo "$2 ...Failure"
+      exit 1
 else
-echo "Installing Ngix ... Success"
+     echo "$2 ... Success"
 fi
+}
+
+dnf install nginx -y
+VALIDATE $? "Nginx Installation"
 
 dnf install mysql -y
-
-if [ $? -ne 0 ]; then
-echo "Installing Mysql ...Failure"
-exit 1
-else
-echo "Installing Mysql ... Success"
-fi
+VALIDATE $? "Installing Mysql"
 
 dnf install nodejs -y
+VALIDATE $? "Installing nodejs"
 
-if [ $? -ne 0 ]; then
-echo "Installing nodejs ...Failure"
-exit 1
-else
-echo "Installing nodejs... Success"
-fi
