@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-set -e
+set -e #ERR
 
 USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
