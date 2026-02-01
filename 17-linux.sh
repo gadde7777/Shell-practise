@@ -2,7 +2,7 @@
 
 set -e #ERR
 
-trap 'echo "There is an error in $LINENO, Command: $BASH_COMMAND"' ERR
+trap 'echo "There is an error in $LINENo, Command: $BASH_COMMAND"' ERR
 
 USER_ID=$(id -u)
 LOGS_FOLDER="/var/log/shell-script"
