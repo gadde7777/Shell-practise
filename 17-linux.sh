@@ -14,7 +14,7 @@ Y="\e[33m"
 N="\e[0m"
 
 if [ $USERID -ne 0 ]; then
-echo "please run script with root user"
+echo-e "$R please run script with root user $N" |tee -a $LOGS_FILE
 exit 1
 fi
 
